@@ -2,7 +2,7 @@
 
 <article>
     {% assign toto = image.path %}
-    <a class="thumbnail" href="{{ site.baseurl }}images/fulls/{{ toto | remove:'/images/thumbs/' }}">
+    <a class="thumbnail" href="{{ site.baseurl }}/images/fulls/{{ toto | remove:'/images/thumbs/' }}">
         <img src="{{ site.baseurl }}{{ image.path }}" alt="" />
     </a>
     <h2>Titulo</h2>
