@@ -1,11 +1,12 @@
  {% for image in site.static_files %} {% if image.path contains 'images/thumbs' %}
 
 <article>
-    {% assign toto = image.path %}
-    <a class="thumbnail" href="{{ site.baseurl }}/images/fulls/{{ toto | remove:'/images/thumbs/' }}">
+    {% assign imageName = image.path %}
+    <a class="thumbnail" href="{{ site.baseurl }}/images/fulls/{{ imageName | remove:'/images/thumbs/' }}">
         <img src="{{ site.baseurl }}{{ image.path }}" alt="" />
     </a>
-    <h2>Titulo</h2>
+    {% assign imageName = imageName | remove:'/images/thumbs/' %} {% assign imageName = imageName | remove:'.jpg' %} {% assign imageName = imageName | remove:'.png' %}
+    <h2>{{ imageName }}</h2>
     <p>Description.</p>
 </article>
 
