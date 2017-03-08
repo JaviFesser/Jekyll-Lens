@@ -1,0 +1,11 @@
+ {% for image in site.static_files %} {% if image.path contains 'images/thumbs' %}
+
+<article>
+    <a class="thumbnail" href="path/to/fullsize.jpg">
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="" />
+    </a>
+    <h2>Title</h2>
+    <p>Description.</p>
+</article>
+
+{% endif %} {% endfor %}
